@@ -1,5 +1,7 @@
 
 if(jQuery){
+  alert(parseInt("bcdacaabbd",16))
+
   var checkAnswers = function(){
     var answerString = "";
     var answers = $(":checked");

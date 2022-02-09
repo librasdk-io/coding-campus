@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="utf-8">
+<head>
+    <meta charset="utf-8" />
+    <title>대화형 게임</title>
+    <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="player_inventory">
+  <span class="item-container"><h3>인벤토리:</h3>
+    <div class="inventory-box empty"></div>
+    <div class="inventory-box empty"></div>
+    <div class="inventory-box empty"></div>
+  </span>
+</div>
+<div id="impress">
+    <!-- 의사 결정 페이지 -->
+    <div id="slide1" class="step slide">
+      <div class="slide-text">
+        <p>여기에 타임머신이 있습니다. 스위치를 켜시겠습니까?</p>
+        <p><a href='#slide2'>네</a>, 스위치를 켭니다.</p>
+        <p><a href='#slide3'>아니오</a>, 과학자인 아빠가 집에 오기를 기다립니다.</p>
+        <div class="event-text"></div>
+     </div>
+     <div class="menu item-container"><div class="inventory-box"><img src="bat.png" alt="bat" class="item" id="bat"></div></div>
+    </div>
+
+    <!-- 게임 종료 페이지 -->
+    <div id="slide2" class="step slide" data-x="1500">
+      <div class="slide-text">
+        <p>와 공룡이다! 공룡을 잡을 수 있을까요?</p>
+        <div class="event-text"></div>
+      </div>
+      <div class="menu"><div class="inventory-box"><img src="dino.png" alt="dino" class="item" id="dino"></div></div>
+    </div>
+    <div id="slide3" class="step slide" data-x="-1500">
+      <div class="slide-text">
+        <p>아빠가 돌아올 때까지 한동안 아무것도 하지 못했습니다. 그리고 아빠가 돌아왔습니다.</p>
+        <p>아빠는 당신의 숙제를 도와주셨습니다.</p>
+        <p>덕분에 지루하진 않았지만 그헣다고 아주 재미있지도 않았습니다.</p>
+        <div class="event-text"></div>
+      </div>
+      <div class="menu"><a href="#slide1">다시 시작하기</a></div>
+      </div>
+</div>
+
+<script src="impress.js"></script>
+<script>impress().init();</script>
+<script src="game.js"></script>
+<script src="dragDrop.js"></script>
+
+</body>
+</html>
